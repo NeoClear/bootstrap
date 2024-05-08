@@ -60,6 +60,10 @@ bindsym $mod+Shift+c exec emacsclient -c -a ""
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# locks the screen
+bindsym $mod+x exec xsecurelock
+
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:

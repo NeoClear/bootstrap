@@ -1,0 +1,15 @@
+neovim
+vim
+emacs
+fzf
+curl
+wget
+git
+zsh
+neofetch
+ripgrep
+gh
+tree
+opam
+htop
+python3-gpg

@@ -54,6 +54,9 @@ bindsym $mod+Return exec alacritty
 # start chrome
 bindsym $mod+n exec google-chrome
 
+# start emacs
+bindsym $mod+Shift+c exec emacsclient -c -a ""
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -154,7 +157,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# TODO: Find a way to resolve this conflict with (open emacs)
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)

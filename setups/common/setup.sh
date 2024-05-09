@@ -16,3 +16,6 @@ opam install ocaml-lsp-server odoc ocamlformat utop
 
 # Softlink Dropbox folder
 ln -s $HOME/Dropbox $HOME/shrine
+
+# Installs spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d

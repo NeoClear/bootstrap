@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Redshift
+GenericName=Screen Temporature Adjuster
+Comment=Make your screen more eye-friendly
+Exec=redshift
+Terminal=false
+Type=Application
+Icon=redshift
+Categories=Screen;
+Keywords=screen;
+StartupNotify=false

@@ -13,3 +13,4 @@ tree
 opam
 htop
 python3-gpg
+hugo

@@ -6,3 +6,4 @@ xsecurelock
 gnome-shell-extension-manager
 redshift
 debsig-verify debian-keyring
+texlive

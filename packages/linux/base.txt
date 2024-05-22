@@ -1,3 +1,4 @@
+emacs
 i3
 xcape
 alacritty
@@ -6,4 +7,4 @@ xsecurelock
 gnome-shell-extension-manager
 redshift
 debsig-verify debian-keyring
-texlive
+python3-gpg

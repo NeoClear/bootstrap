@@ -1,6 +1,5 @@
 neovim
 vim
-emacs
 fzf
 curl
 wget
@@ -12,5 +11,4 @@ gh
 tree
 opam
 htop
-python3-gpg
 hugo

@@ -19,7 +19,7 @@ elif [ $OS = Linux ]
 then
     if [ -e ./packages/linux/base.txt ]
     then
-        SPECIFIC=`cat ./packages/darwin/base.txt | xargs echo`
+        SPECIFIC=`cat ./packages/linux/base.txt | xargs echo`
     fi
 fi
 
@@ -29,6 +29,9 @@ then
     brew install --cask $SPECIFIC
 elif [ $OS = Linux ]
 then
-    # TODO
-    echo PLACEHOLDER
+    if [ -x "$(command -v apt)" ]
+    then
+        sudo apt install $COMMON
+        sudo apt install $SPECIFIC
+    fi
 fi

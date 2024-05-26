@@ -1,1 +1,3 @@
 emacs
+1password
+amazon-q

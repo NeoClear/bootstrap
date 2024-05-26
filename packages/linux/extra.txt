@@ -1,4 +1,1 @@
-1password
-1password-cli
-dropbox
 google-chrome-stable

@@ -26,7 +26,7 @@ fi
 if [ $OS = Darwin ]
 then
     brew install $COMMON
-    brew install --cask $SPECIFIC
+    brew install $SPECIFIC
 elif [ $OS = Linux ]
 then
     if [ -x "$(command -v apt)" ]

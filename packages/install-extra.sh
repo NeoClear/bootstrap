@@ -27,7 +27,7 @@ if [ $OS = Darwin ]
 then
     if [ ! -z $COMMON ]
     then
-        brew install $COMMON
+        brew install --cask $COMMON
     fi
     if [ ! -z $SPECIFIC ]
     then

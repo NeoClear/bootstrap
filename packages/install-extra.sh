@@ -27,11 +27,11 @@ if [ $OS = Darwin ]
 then
     if [ ! -z $COMMON ]
     then
-        brew install --cask $COMMON
+        brew install --cask `echo $COMMON`
     fi
     if [ ! -z $SPECIFIC ]
     then
-        brew install --cask $SPECIFIC
+        brew install --cask `echo $SPECIFIC`
     fi
 elif [ $OS = Linux ]
 then

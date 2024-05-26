@@ -5,3 +5,4 @@ dropbox
 iterm2
 raycast
 google-chrome
+rectangle

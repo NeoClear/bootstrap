@@ -4,4 +4,4 @@ amazon-q
 dropbox
 iterm2
 raycast
-arc
+google-chrome

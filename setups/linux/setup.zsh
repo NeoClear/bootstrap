@@ -19,10 +19,4 @@ echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google.asc] https://dl.google.
 # Update apt source
 sudo apt update
 
-# Setup prezto
-git clone --recursive https://github.com/NeoClear/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
 chsh -s /bin/zsh

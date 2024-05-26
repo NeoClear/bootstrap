@@ -1,3 +1,5 @@
 emacs
 1password
 amazon-q
+dropbox
+iterm2

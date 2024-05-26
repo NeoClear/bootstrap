@@ -7,7 +7,7 @@ if [ $OS = Darwin ]
 then
     if [ -e ./dotfiles/darwin ]
     then
-        echo UNIMPLEMENTED
+        cp -r ./dotfiles/darwin/home/.??* ~
     fi
 elif [ $OS = Linux ]
 then

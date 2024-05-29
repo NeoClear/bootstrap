@@ -7,3 +7,4 @@ raycast
 google-chrome
 rectangle
 mactex
+pdf-expert

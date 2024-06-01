@@ -8,3 +8,4 @@ google-chrome
 rectangle
 mactex
 pdf-expert
+zoom

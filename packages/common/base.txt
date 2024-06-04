@@ -12,3 +12,4 @@ tree
 opam
 htop
 hugo
+smartmontools

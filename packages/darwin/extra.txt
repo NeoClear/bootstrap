@@ -9,3 +9,4 @@ rectangle
 mactex
 pdf-expert
 zoom
+iina

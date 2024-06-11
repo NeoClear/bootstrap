@@ -10,3 +10,4 @@ debsig-verify debian-keyring
 python3-gpg
 python3-pip
 libdrm-dev
+pavucontrol

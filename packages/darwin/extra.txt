@@ -10,3 +10,4 @@ mactex
 pdf-expert
 zoom
 iina
+discord

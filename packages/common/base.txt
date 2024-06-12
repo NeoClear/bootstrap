@@ -13,3 +13,8 @@ opam
 htop
 hugo
 smartmontools
+ncdu
+aria2
+tmux
+nodejs
+npm

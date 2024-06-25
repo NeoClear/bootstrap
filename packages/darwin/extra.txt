@@ -13,3 +13,4 @@ iina
 discord
 hyperkey
 font-jetbrains-mono
+zed

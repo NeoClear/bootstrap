@@ -1,9 +1,0 @@
-font:
-  normal:
-    family: MonoLisa
-    style: Regular
-  size: 12
-shell:
-  program: /bin/zsh
-  args:
-    - --login

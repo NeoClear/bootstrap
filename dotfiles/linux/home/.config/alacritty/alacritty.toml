@@ -1,0 +1,10 @@
+[font]
+size = 12
+
+[font.normal]
+family = "MonoLisa"
+style = "Regular"
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"

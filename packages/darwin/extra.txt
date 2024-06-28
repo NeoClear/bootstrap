@@ -14,3 +14,4 @@ discord
 hyperkey
 font-jetbrains-mono
 zed
+balenaetcher

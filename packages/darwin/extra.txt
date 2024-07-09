@@ -16,3 +16,4 @@ font-jetbrains-mono
 zed
 balenaetcher
 monitorcontrol
+tradingview

@@ -1,0 +1,16 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "space f s": "workspace::Save",
+      "space s s": "vim::Search",
+      "space b d": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": "terminal_panel::ToggleFocus"
+    }
+  }
+]

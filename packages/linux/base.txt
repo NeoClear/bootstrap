@@ -12,3 +12,4 @@ python3-pip
 libdrm-dev
 pavucontrol
 okular
+rofi

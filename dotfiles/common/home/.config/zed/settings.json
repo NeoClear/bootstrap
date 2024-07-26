@@ -7,10 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "outline_panel": {
+    "dock": "right"
+  },
   "theme": "KTRZ Monokai",
   "vim_mode": true,
   "ui_font_size": 16,
   "ui_font_family": "MonoLisa",
   "buffer_font_size": 16,
-  "current_line_highlight": "line"
+  "buffer_font_family": "MonoLisa",
+  "current_line_highlight": "line",
+  "soft_wrap": "editor_width",
+  "tab_size": 2,
+  "hard_tabs": false
 }

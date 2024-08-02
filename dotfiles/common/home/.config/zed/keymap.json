@@ -4,13 +4,13 @@
     "bindings": {
       "space f s": "workspace::Save",
       "space s s": "vim::Search",
-      "space b d": "pane::CloseActiveItem",
-      "space q q": "pane::CloseActiveItem"
+      "space q": "pane::CloseActiveItem"
     }
   },
   {
     "bindings": {
       "ctrl-j": "terminal_panel::ToggleFocus",
+      "ctrl-k": "outline::Toggle",
       "ctrl-e": "outline_panel::ToggleFocus",
       "ctrl-b": "project_panel::ToggleFocus"
     }

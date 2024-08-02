@@ -7,10 +7,22 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o"
+    },
+    "version": "2",
+    "provider": {
+      "name": "openai",
+      "default_model": "gpt-4o",
+      "available_models": []
+    }
+  },
   "outline_panel": {
     "dock": "right"
   },
-  "theme": "KTRZ Monokai",
+  "theme": "One Dark Pro",
   "vim_mode": true,
   "ui_font_size": 16,
   "ui_font_family": "MonoLisa",
@@ -19,5 +31,10 @@
   "current_line_highlight": "line",
   "soft_wrap": "editor_width",
   "tab_size": 2,
-  "hard_tabs": false
+  "hard_tabs": false,
+  "languages": {
+    "Python": {
+      "tab_size": 4
+    }
+  }
 }

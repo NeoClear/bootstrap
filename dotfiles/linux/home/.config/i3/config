@@ -67,6 +67,9 @@ bindsym $mod+z exec zed
 # start emacs
 bindsym $mod+c exec emacsclient -c -a ""
 
+# start lobe-chat app
+bindsym $mod+t exec google-chrome --app='https://lobe-chat-7u37.vercel.app/chat?agent'
+
 # kill focused window
 bindsym $mod+q kill
 

@@ -6,7 +6,6 @@ iterm2
 raycast
 google-chrome
 rectangle
-mactex
 pdf-expert
 zoom
 iina

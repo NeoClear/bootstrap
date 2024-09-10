@@ -13,3 +13,4 @@ libdrm-dev
 pavucontrol
 okular
 rofi
+pahole

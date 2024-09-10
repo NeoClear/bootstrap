@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=update
+GenericName=Update
+Comment=Keep non critical softwares up-to-date
+Exec=sh ~/forge/repo/update.sh > /tmp/update.log 2>&1
+Terminal=false
+Type=Application
+Categories=Update;
+Keywords=Update;
+StartupNotify=true

@@ -19,3 +19,4 @@ tmux
 nodejs
 npm
 go
+btop

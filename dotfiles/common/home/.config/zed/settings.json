@@ -9,15 +9,10 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-4o"
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
     },
-    "version": "2",
-    "provider": {
-      "name": "openai",
-      "default_model": "gpt-4o",
-      "available_models": []
-    }
+    "version": "2"
   },
   "outline_panel": {
     "dock": "right"
@@ -33,8 +28,25 @@
   "tab_size": 2,
   "hard_tabs": false,
   "languages": {
+    "C++": {
+      "show_inline_completions": false,
+      "format_on_save": "language_server"
+    },
+    "Typst": {
+      "show_inline_completions": false
+    },
     "Python": {
+      "show_inline_completions": false,
+      "tab_size": 4
+    },
+    "Rust": {
       "tab_size": 4
     }
+  },
+  "features": {
+    "inline_completion_provider": "copilot"
+  },
+  "file_types": {
+    "C++": ["/usr/include/c++/**/*"]
   }
 }

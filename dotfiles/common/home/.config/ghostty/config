@@ -1,9 +1,16 @@
 gtk-titlebar = false
+gtk-adwaita = false
+window-decoration = true
 
 font-family = "MonoLisa"
 font-size = 12
+
+# theme = Afterglow
+theme = tokyonight
 
 shell-integration = zsh
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor, sudo, title
+
+

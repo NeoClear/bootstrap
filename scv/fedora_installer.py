@@ -1,5 +1,7 @@
 from typing import override
 
+from installer.common_installer import CommonInstaller
+from installer.linux_installer import LinuxInstaller
 from installer.package_list import COMMON_PACKAGES, LINUX_PACKAGES
 from .installer import DependencySequenceInstaller, PackageManagerInstaller
 
@@ -32,5 +34,7 @@ class FedoraInstaller(DependencySequenceInstaller):
         super().__init__(installers=[
             FedoraPackageInstaller(),
             FedoraDropboxInstaller(),
-            Fedora1PasswordInstaller()
+            Fedora1PasswordInstaller(),
+            LinuxInstaller(),
+            CommonInstaller()
         ])

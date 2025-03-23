@@ -1,8 +1,9 @@
 from .installer import DependencySequenceInstaller
 from .installer import ScriptInstaller
+from .parameters import Parameters
 
 class SshKeyInstaller(ScriptInstaller):
-    SSH_KEYGEN_COMMAND = "ssh-keygen -t ed25519 -C 'neoclear@outlook.com'"
+    SSH_KEYGEN_COMMAND = f"ssh-keygen -t ed25519 -C '{Parameters.get_instance().get("SCV_EMAIL")}'"
 
     def __init__(self):
         super().__init__(command=self.SSH_KEYGEN_COMMAND, link="")
@@ -39,6 +40,28 @@ class SpacemacsInstaller(ScriptInstaller):
 
     def __init__(self):
         super().__init__(command=self.SPACEMACS_INSTALL_COMMAND, link="")
+
+class DropboxSymlinkInstaller(ScriptInstaller):
+    DROPBOX_SYMLINK_COMMAND = "ln -s $HOME/Dropbox $HOME/shrine"
+
+    def __init__(self):
+        super().__init__(command=self.DROPBOX_SYMLINK_COMMAND, link="")
+
+class ZprestoSetupInstaller(DependencySequenceInstaller):
+    class GitCloneInstaller(ScriptInstaller):
+        def __init__(self):
+            super().__init__(command='echo \'git clone --recursive https://github.com/NeoClear/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"\' | zsh',
+                             link="")
+    class SymlinkZprestoInstaller(ScriptInstaller):
+        def __init__(self):
+            super().__init__(command='echo \'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done\' | zsh',
+                             link='')
+    def __init__(self):
+        super().__init__(installers=[
+            self.GitCloneInstaller(),
+            self.SymlinkZprestoInstaller()
+        ])
+
 
 class CommonInstaller(DependencySequenceInstaller):
     def __init__(self):

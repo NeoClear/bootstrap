@@ -1,8 +1,8 @@
 from typing import override
 
-from installer.common_installer import CommonInstaller
-from installer.linux_installer import LinuxInstaller
-from installer.package_list import COMMON_PACKAGES, LINUX_PACKAGES
+from .common_installer import CommonInstaller
+from .linux_installer import LinuxInstaller
+from .package_list import COMMON_PACKAGES, LINUX_PACKAGES
 from .installer import DependencySequenceInstaller, PackageManagerInstaller
 
 class DnfInstaller(PackageManagerInstaller):

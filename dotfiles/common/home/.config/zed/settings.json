@@ -19,9 +19,9 @@
   },
   "theme": "One Dark Pro",
   "vim_mode": true,
-  "ui_font_size": 16,
+  "ui_font_size": 14,
   "ui_font_family": "MonoLisa",
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   "buffer_font_family": "MonoLisa",
   "current_line_highlight": "line",
   "soft_wrap": "editor_width",
@@ -29,14 +29,14 @@
   "hard_tabs": false,
   "languages": {
     "C++": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "format_on_save": "language_server"
     },
     "Typst": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     },
     "Python": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "tab_size": 4
     },
     "Rust": {
@@ -44,7 +44,7 @@
     }
   },
   "features": {
-    "inline_completion_provider": "copilot"
+    "edit_prediction_provider": "copilot"
   },
   "file_types": {
     "C++": ["/usr/include/c++/**/*"]

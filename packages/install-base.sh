@@ -37,7 +37,7 @@ then
     
     if [ -x "$(command -v dnf)" ]
     then
-        sudo dnf install $COMMON
-	sudo dnf install $SPECIFIC
+        sudo dnf install --skip-unavailable $COMMON
+	sudo dnf install --skip-unavailable $SPECIFIC
     fi
 fi

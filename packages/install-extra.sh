@@ -35,6 +35,15 @@ then
     fi
 elif [ $OS = Linux ]
 then
-    # TODO
-    echo PLACEHOLDER
+    if [ -x "$(command -v apt)" ]
+    then
+        sudo apt install $COMMON
+        sudo apt install $SPECIFIC
+    fi
+    
+    if [ -x "$(command -v dnf)" ]
+    then
+        sudo dnf install --skip-unavailable $COMMON
+	sudo dnf install --skip-unavailable $SPECIFIC
+    fi
 fi

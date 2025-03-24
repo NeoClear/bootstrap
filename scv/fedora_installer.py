@@ -1,9 +1,9 @@
 from typing import override
 
-from .common_installer import CommonInstaller
-from .linux_installer import LinuxInstaller
-from .package_list import COMMON_PACKAGES, LINUX_PACKAGES
-from .installer import DependencySequenceInstaller, PackageManagerInstaller
+from common_installer import CommonInstaller
+from linux_installer import LinuxInstaller
+from package_list import COMMON_PACKAGES, LINUX_PACKAGES
+from installer import DependencySequenceInstaller, PackageManagerInstaller
 
 class DnfInstaller(PackageManagerInstaller):
     def __init__(self, packages=[]):

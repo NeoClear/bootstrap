@@ -1,4 +1,4 @@
-from .installer import DependencySequenceInstaller, ScriptInstaller
+from installer import DependencySequenceInstaller, ScriptInstaller
 
 
 class OllamaInstaller(ScriptInstaller):

@@ -2,14 +2,14 @@ import os
 from typing import override, final
 
 class Installer:
-    def run_install_command(self, verbose=False, dry_run=True) -> bool:
+    def run_install_command(self, verbose: bool, dry_run: bool) -> bool:
         """Returns true if command is successful.
         Derived class should always override this method
         """
         raise RuntimeError("Unimplemented")
 
     @final
-    def install(self, verbose=False, dry_run=True) -> bool:
+    def install(self, verbose: bool, dry_run: bool) -> bool:
         """Returns true if installation is successful.
         If the installation failed, it would return false.
         This method is final.
@@ -19,7 +19,7 @@ class Installer:
         else:
             self.show_description()
 
-        if not self.run_install_command(dry_run=dry_run):
+        if not self.run_install_command(dry_run=dry_run, verbose=verbose):
             self.show_reference()
             return False
 
@@ -79,7 +79,7 @@ class ScriptInstaller(Installer):
         self.link = link
 
     @override
-    def run_install_command(self, verbose=False, dry_run=True) -> bool:
+    def run_install_command(self, verbose: bool, dry_run: bool) -> bool:
         if dry_run:
             return True
 

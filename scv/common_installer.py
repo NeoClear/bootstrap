@@ -1,6 +1,6 @@
-from .installer import DependencySequenceInstaller
-from .installer import ScriptInstaller
-from .parameters import Parameters
+from installer import DependencySequenceInstaller
+from installer import ScriptInstaller
+from parameters import Parameters
 
 class SshKeyInstaller(ScriptInstaller):
     SSH_KEYGEN_COMMAND = f"ssh-keygen -t ed25519 -C '{Parameters.get_instance().get("SCV_EMAIL")}'"

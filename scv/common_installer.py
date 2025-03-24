@@ -30,7 +30,7 @@ class RustInstaller(SequenceInstaller):
             super().__init__(command=self.RUST_ANALYZER_INSTALL_COMMAND, link="")
 
     def __init__(self):
-        super().__init__(installers=[
+        super().__init__([
             self.RustupInstaller(),
             self.RustAnalyzerInstaller()
         ])
@@ -57,7 +57,7 @@ class ZprestoSetupInstaller(SequenceInstaller):
             super().__init__(command='echo \'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done\' | zsh',
                              link='')
     def __init__(self):
-        super().__init__(installers=[
+       super().__init__([
             self.GitCloneInstaller(),
             self.SymlinkZprestoInstaller()
         ])
@@ -65,9 +65,9 @@ class ZprestoSetupInstaller(SequenceInstaller):
 
 class CommonInstaller(SequenceInstaller):
     def __init__(self):
-        super().__init__(installers=[
+        super().__init__([
             SshKeyInstaller(),
             MiseInstaller(),
             RustInstaller(),
             SpacemacsInstaller()
-        ])
+        ], stop_on_error=False) # Failure on any step should not abort the entire installation flow

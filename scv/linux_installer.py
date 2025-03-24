@@ -10,6 +10,6 @@ class OllamaInstaller(ScriptInstaller):
 
 class LinuxInstaller(SequenceInstaller):
     def __init__(self):
-        super().__init__(installers=[
+        super().__init__([
             OllamaInstaller()
-        ])
+        ], stop_on_error=False)

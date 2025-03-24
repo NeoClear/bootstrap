@@ -1,4 +1,4 @@
-from installer import DependencySequenceInstaller
+from installer import SequenceInstaller
 from installer import ScriptInstaller
 from parameters import Parameters
 
@@ -15,7 +15,7 @@ class MiseInstaller(ScriptInstaller):
     def __init__(self):
         super().__init__(command=self.MISE_INSTALL_COMMAND, link=self.MISE_WEBSITE_URL)
 
-class RustInstaller(DependencySequenceInstaller):
+class RustInstaller(SequenceInstaller):
     class RustupInstaller(ScriptInstaller):
         RUSTUP_INSTALL_COMMAND = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
         RUSTUP_WEBSITE_URL = "https://rustup.rs/"
@@ -47,7 +47,7 @@ class DropboxSymlinkInstaller(ScriptInstaller):
     def __init__(self):
         super().__init__(command=self.DROPBOX_SYMLINK_COMMAND, link="")
 
-class ZprestoSetupInstaller(DependencySequenceInstaller):
+class ZprestoSetupInstaller(SequenceInstaller):
     class GitCloneInstaller(ScriptInstaller):
         def __init__(self):
             super().__init__(command='echo \'git clone --recursive https://github.com/NeoClear/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"\' | zsh',
@@ -63,7 +63,7 @@ class ZprestoSetupInstaller(DependencySequenceInstaller):
         ])
 
 
-class CommonInstaller(DependencySequenceInstaller):
+class CommonInstaller(SequenceInstaller):
     def __init__(self):
         super().__init__(installers=[
             SshKeyInstaller(),

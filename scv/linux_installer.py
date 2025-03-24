@@ -1,4 +1,4 @@
-from installer import DependencySequenceInstaller, ScriptInstaller
+from installer import SequenceInstaller, ScriptInstaller
 
 
 class OllamaInstaller(ScriptInstaller):
@@ -8,7 +8,7 @@ class OllamaInstaller(ScriptInstaller):
     def __init__(self):
         super().__init__(command=self.OLLAMA_INSTALL_COMMAND, link=self.OLLAMA_WEBSITE_URL)
 
-class LinuxInstaller(DependencySequenceInstaller):
+class LinuxInstaller(SequenceInstaller):
     def __init__(self):
         super().__init__(installers=[
             OllamaInstaller()

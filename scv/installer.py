@@ -40,7 +40,7 @@ class Installer:
         pass
 
 
-class DependencySequenceInstaller(Installer):
+class SequenceInstaller(Installer):
     """Runs a sequence of installers.
     Any installation failure would abort the entire install
     """

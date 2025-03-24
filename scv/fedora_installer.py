@@ -3,7 +3,7 @@ from typing import override
 from common_installer import CommonInstaller
 from linux_installer import LinuxInstaller
 from package_list import COMMON_PACKAGES, LINUX_PACKAGES
-from installer import DependencySequenceInstaller, PackageManagerInstaller
+from installer import SequenceInstaller, PackageManagerInstaller
 
 class DnfInstaller(PackageManagerInstaller):
     def __init__(self, packages=[]):
@@ -29,7 +29,7 @@ class Fedora1PasswordInstaller(DnfInstaller):
     def __init__(self):
         super().__init__(packages=[self.FEDORA_1PASSWORD_PACKAGE_URL])
 
-class FedoraInstaller(DependencySequenceInstaller):
+class FedoraInstaller(SequenceInstaller):
     def __init__(self):
         super().__init__(installers=[
             FedoraPackageInstaller(),

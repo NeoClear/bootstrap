@@ -216,3 +216,9 @@ bar {
 
 no_focus [class="Fig" instance="fig" window_role="autocomplete"]
 for_window [class="Fig" instance="fig" window_role="autocomplete"] border pixel 0
+
+for_window [class="com.mitchellh.ghostty"] border normal 2
+
+# Below script works with ~/.screenlayout/footbox.sh
+workspace 1 output DP-2
+workspace 2 output DP-4

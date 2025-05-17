@@ -222,3 +222,7 @@ for_window [class="com.mitchellh.ghostty"] border normal 2
 # Below script works with ~/.screenlayout/footbox.sh
 workspace 1 output DP-2
 workspace 2 output DP-4
+
+# For AppIndicator support required by Dropbox
+# Visit https://help.dropbox.com/installs/dropbox-desktop-app-for-linux#Supported-desktop-environments for more info
+exec --no-startup-id kdeconnect-indicator 

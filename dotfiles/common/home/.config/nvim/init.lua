@@ -1,0 +1,2 @@
+require("neofig")
+print("hello")
